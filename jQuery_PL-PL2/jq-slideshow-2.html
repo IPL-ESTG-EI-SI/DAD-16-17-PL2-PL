@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+	<style>
+		.slider {padding: 30px; margin: auto; background-color: lightgrey;}
+		.slider img {width: 100%; }
+		.slides {padding: 0;}
+	</style>
+	<title>Slideshow 2 (jQuery)</title>
+</head>
+<body>
+	<div class="container">
+		<h1>Slideshow 2 (jQuery)</h1>
+		<div class="well">
+			<p> <a href="index.html">Back to index</a> </p>
+			<p>Displays an image slide show using the <a href="http://kenwheeler.github.io/slick/">Slick</a> plugin.</p>
+            <p>Consider the following rules:</p>
+            <ul>
+                <li>show dots;</li>
+                <li>autoplay (2s between each transition). Pauses autoplay when the mouse is hover a dot;</li>
+                <li>shows 5 slides and scrolls one slide on each transition;</li>
+                <li>support the following responsive breakpoints:
+                    <ul>
+                        <li>&lt;=980px – shows 4 slides;</li>
+                        <li>&lt;=768px – shows 3 slides;</li>
+                        <li>&lt;=568px – shows only one slide and don't show dots;</li>
+                    </ul>
+                </li>
+            </ul>
+			<p> <em>Note: Use a separate JavaScript code file "slideshow-2.js"</em> </p>
+		</div>
+        <div class="slider">
+            <ul class="slides">
+                <li><img src="slide_img/img-1.jpeg" alt="Slide 1"></li>
+                <li><img src="slide_img/img-2.jpeg" alt="Slide 2"></li>
+                <li><img src="slide_img/img-3.jpeg" alt="Slide 3"></li>
+                <li><img src="slide_img/img-4.jpeg" alt="Slide 4"></li>
+                <li><img src="slide_img/img-5.jpeg" alt="Slide 5"></li>
+                <li><img src="slide_img/img-6.jpeg" alt="Slide 6"></li>
+                <li><img src="slide_img/img-7.jpeg" alt="Slide 7"></li>
+                <li><img src="slide_img/img-8.jpeg" alt="Slide 8"></li>
+                <li><img src="slide_img/img-9.jpeg" alt="Slide 9"></li>
+                <li><img src="slide_img/img-10.jpeg" alt="Slide 10"></li>
+                <li><img src="slide_img/img-11.jpeg" alt="Slide 11"></li>
+                <li><img src="slide_img/img-12.jpeg" alt="Slide 12"></li>
+                <li><img src="slide_img/img-13.jpeg" alt="Slide 13"></li>
+            </ul>
+        </div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+	<script src="js/slideshow-2.js"></script>
+</body>
+</html>

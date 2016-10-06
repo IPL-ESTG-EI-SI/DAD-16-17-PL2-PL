@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<title>Slideshow (jQuery)</title>
+</head>
+<body>
+	<div class="container">
+		<h1>Slideshow (jQuery)</h1>
+		<div class="well">
+			<p> <a href="index.html">Back to index</a> </p>
+			<p>Displays an image slide show with navigation links that automatically change images every 2 seconds.</p>
+			<p> <em>Note: Use a separate JavaScript code file "slideshow.js"</em> </p>
+		</div>
+		<div id="actionBar" class="btn-group" role="group">
+		  <button id="previous" type="button" class="btn btn-default">Previous</button>
+		  <button id="stop" type="button" class="btn btn-default">Stop</button>
+		  <button id="restart" type="button" class="btn btn-default">Restart</button>
+		  <button id="next" type="button" class="btn btn-default">Next</button>
+		</div>
+		<div class="row">
+		<p class="col-md-5">
+			<br>
+			<img id="slider" class="img-thumbnail" src="slide_img/img-1.jpeg" alt="Slider" />
+		</p>
+		</div>
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="js/slideshow.js"></script>
+</body>
+</html>

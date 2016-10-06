@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/redmond/jquery-ui.css">
+    <title>The Sum Game (jQuery)</title>
+    <style>
+        .game {background-color: #236167;color:#fff;}
+        .game .label {font-size: 120%;}
+        .game button {float:left;height:6em; width: 150px;font-size:120%;font-weight: bold;text-transform: uppercase;background-color: #AA8639;border:none;color:#fff;line-height: 3em;margin-right:20px;}
+        .game button:hover {background-color: #553A00;}
+        .game .cell { margin: 3px 3px 3px 0; padding: 1px; float: left; width: 100px; height: 90px; line-height: 90px;font-size: 4em; text-align: center; }
+        .game .board {min-height: 294px;}
+        .game .wrapper:after {clear:both;content:'';display:block;}
+        .game .sortable .cell {background-color: #68979B; font-weight: normal;color:#fff;}
+        .game .challenge .cell {background-color: #013034; font-weight: normal;color:#fff;}
+        .game .help .cell {background-color: #FFE4AA; font-weight: normal;color:#000;}
+        .game .sortable { list-style-type: none; margin: 0; padding: 0; width: 450px; float:left;}
+        .game .challenge {list-style-type: none;margin:0;padding: 0;width: 150px;float:left;}
+        .game .help {list-style-type: none;margin:0;padding: 0;width: 150px;float:left;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>The Sum Game (jQuery)</h1>
+    <div class="well">
+        <p> <a href="index.html">Back to index</a> </p>
+        <p>Rules:</p>
+        <ul>
+            <li>The goal of the game is to sort the grid so that the required sum for each row is correct. </li>
+            <li>The last column should show the difference between the current sum and the target sum. </li>
+            <li>To change the number position drag the desired number to its target position. All the remaining numbers are pushed to the right. To achieve this behavior use the interaction <a href="http://jqueryui.com/sortable/">Sortable</a> from jQuery UI.</li>
+            <li>The player has a timeout (starts with 120s) to reorder the numbers so that the sum for each row match it's target sum. </li>
+            <li>When the timeout expires the game ends. </li>
+            <li>If the player completes the game before the timeout expires, the score is incremented by 78, a new board is created, the initial timeout decrements by 10 and the game continues.</li>
+        </ul>
+        <p> <em>Note: Use a separate JavaScript code file "jq-sum-game.js"</em> </p>
+    </div>
+    <div class="well game">
+    <h1>The Sum Game</h1>
+    <div>
+        <button id="start" data-mode="start">Start</button>
+        <p id="level" class="label">Level: <span>---</span></p>
+        <p id="score" class="label">Score: <span>---</span></p>
+        <p id="timer" class="label">Timer: <span>---</span></p>
+    </div>
+    <div id="board">
+        <div class="wrapper">
+            <ul id="numbers" class="sortable">
+                <li class="cell"></li>
+                <li class="cell"></li>
+                <li class="cell"></li>
+                <li class="cell"></li>
+                <li class="cell"></li>
+                <li class="cell"></li>
+                <li class="cell"></li>
+                <li class="cell"></li>
+                <li class="cell"></li>
+                <li class="cell"></li>
+                <li class="cell"></li>
+                <li class="cell"></li>
+            </ul>
+            <ul id="goals" class="challenge">
+                <li class="cell"></li>
+                <li class="cell"></li>
+                <li class="cell"></li>
+            </ul>
+            <ul id="hint" class="help">
+                <li class="cell"></li>
+                <li class="cell"></li>
+                <li class="cell"></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<script src="js/sum-game.js"></script>
+</body>
+</html>

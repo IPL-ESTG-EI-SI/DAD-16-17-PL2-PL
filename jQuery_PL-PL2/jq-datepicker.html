@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/redmond/jquery-ui.css">
+    <title>Datepicker (jQuery UI)</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Datepicker (jQuery UI)</h1>
+        <div class="well">
+            <p> <a href="index.html">Back to index</a> </p>
+            <p>Displays four <strong>datepickers</strong> using the <a href="https://jqueryui.com/">jQuery UI</a> Widgets.</p>
+            <p>Two of the datepickers use the portuguese language. The other two are in english.</p>
+            <p>For each language there will be a version without any configuration and a version that allows <strong>only dates of the last month (from one month ago until today)</strong>. Also, this last version changes the date format to <strong>"day-month-year"</strong>.</p>
+            <p>Use the redmond theme. You must change the HTML file to load the additional required JavaScript and CSS files</p>
+            <p><em>Note: Use a separate JavaScript code file: datepicker.js</em></p>
+        </div>
+        <form action="#">
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="date1">Date 1 (English - No Configuration)</label>
+                    <input type="text" class="form-control" id="date1">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="date2">Date 2 (English - With Configuration)</label>
+                    <input type="text" class="form-control" id="date2">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="date3">Date 3 (Portuguese - No Configuration)</label>
+                    <input type="text" class="form-control" id="date3">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="date4">Date 4 (Portuguese - With Configuration)</label>
+                    <input type="text" class="form-control" id="date4">
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="i18n/datepicker-pt.js"></script>
+    <script src="js/datepicker.js"></script>
+ </body>
+</html>

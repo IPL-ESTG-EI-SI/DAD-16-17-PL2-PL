@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<title>Form Validation (JavaScript)</title>
+</head>
+<body>
+<div class="container">
+	<h1>Form Validation (JavaScript)</h1>
+	<div class="well">
+		<p> <a href="index.html">Back to index</a> </p>
+		<p>Validating forms on the client side using <a href="http://jqueryvalidation.org/">jQuery validation</a> plugin.</p>
+		<ul>
+			<li>
+				Consider the following rules:
+					<ol>
+						<li> The field name is mandatory </li>
+						<li> The field grade must be an integer value between 0 and 20 (inclusive) </li>
+						<li> The field evaluation period is required </li>
+				 	</ol>
+			</li>
+			<li>
+				The validation is performed in two moments:
+				<ul>
+					<li>Whenever the value changes from a valid value to an invalid one</li>
+					<li>Before submitting the form data</li>
+				</ul>
+			</li>
+			<li>
+				Data can only be submitted if the values of both fields are valid. When the form is submitted
+				the page should show an alert stating "Form submitted".
+			</li>
+		</ul>
+		<p> <em>Note: Use a separate JavaScript code file "validation.js"</em> </p>
+	</div>
+	<form id="gradeForm" action="#">
+		<div class="form-group">
+			<label for="name">Name</label>
+			<input type="text" class="form-control" id="name" placeholder="Name" name="name">
+		</div>
+		<div class="form-group">
+			<label for="grade">Grade</label>
+			<input type="text" class="form-control" id="grade" placeholder="Grade" name="grade">
+		</div>
+		<div class="form-group">
+			<label for="period">Evaluation Period</label>
+			<select class="form-control" id="period" name="period">
+				<option disabled selected>---</option>
+			    <option value="P"> Periodic Evaluation </option>
+			    <option value="N"> Normal Exam </option>
+			    <option value="A"> Appeal Exam </option>
+			    <option value="S"> Special Exam </option>
+			    <option value="X"> Extraordinary Exam </option>
+			</select>
+		</div>
+		<button type="submit" class="btn btn-success">Submit</button>
+		<button type="reset" class="btn btn-default">Reset</button>
+	</form>
+</div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+<script src="js/validation.js"></script>
+</body>
+</html>

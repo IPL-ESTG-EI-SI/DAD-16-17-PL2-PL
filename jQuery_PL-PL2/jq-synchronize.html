@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <title>
+        Synchronize Fields (jQuery)
+    </title>
+</head>
+<body>
+    <div class="container">
+        <h1> Synchronize Fields (jQuery) </h1>
+        <div class="well">
+            <p> <a href="index.html"> Back to index </a> </p>
+            <p> Synchronize field values of a form with text in a different section of the page. </p>
+            <p> The text of the <span> elements of the "top" section, display the value of the fields in the form. </span> </p>
+            <p> Note that the behavior of the fields Name and Grade are different because of the event used in each field. In the field "Name" it is used the event <strong> onchange </strong> and in "Grade" the event <strong> onkeyup </strong>. On load the "top" section should show the default values on each field. When pressing reset all "text" fields are cleared and the select resets to the first option.
+            </p>
+            <p> <em> Note: Use a separate JavaScript code file "synchronize.js"</em> </p>
+        </div>
+		<div class="panel panel-success">
+		 	<div class="panel-heading">Output</div>
+  			<div class="panel-body">
+    			<span class="alert-info col-md-2" id="nameOutput">Empty</span>
+    			<span class="alert-info col-md-2 col-md-offset-1" id="gradeOutput">Empty</span>
+    			<span class="alert-info col-md-2 col-md-offset-1" id="periodOutput">Empty</span>
+  			</div>
+		</div>
+		<form action="#">
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input type="text" class="form-control" id="name" placeholder="Name" value="DAD">
+			</div>
+			<div class="form-group">
+				<label for="grade">Grade</label>
+				<input type="number" class="form-control" id="grade" placeholder="Grade" value="20">
+			</div>
+			<div class="form-group">
+				<label for="period">Evaluation Period</label>
+				<select class="form-control" id="period" name="period">
+				    <option value="P"> Periodic Evaluation </option>
+				    <option value="N" selected> Normal Exam </option>
+				    <option value="A"> Appeal Exam </option>
+				    <option value="S"> Special Exam </option>
+				    <option value="X"> Extraordinary Exam </option>
+				</select>
+			</div>
+			<button type="submit" class="btn btn-success">Submit</button>
+			<button type="reset" class="btn btn-default">Reset</button>
+		</form>
+	</div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="js/synchronize.js"></script>
+</body>
+</html>

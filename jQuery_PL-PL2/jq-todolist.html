@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<title>Todo List (jQuery)</title>
+</head>
+<body>
+	<div class="container">
+		<h1>Todo List (jQuery)</h1>
+		<div class="well">
+			<p> <a href="index.html">Back to index</a> </p>
+			<p> Implements a simple TODO list.</p>
+			<p> <em>Note: Use a separate JavaScript code file "todo-list.js"</em> </p>
+		</div>
+		<form action="#" class="form-inline">
+		  <div class="form-group">
+		    <label for="task">Task</label>
+		    <input type="text" class="form-control" id="task" placeholder="Enter the task description" size="50">
+		  </div>
+		  <button type="submit" class="btn btn-info">
+		  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+		  </button>
+		</form>
+		<br/>
+		<ul id="tasks" class="list-group col-md-5">
+		  <li class="list-group-item">
+		    <span>Study for DAD</span>
+		    <div class="pull-right">
+				<button class="btn btn-success btn-xs"> <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> </button> <button class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> </button>
+			</div>
+		  </li>
+		  <li class="list-group-item">
+		    <span><s>Finish worksheet about JavaScript</s></span>
+		    <div class="pull-right">
+				<button class="btn btn-info btn-xs"> <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span> </button>
+				<button class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> </button>
+			</div>
+		  </li>
+		  <li class="list-group-item">
+		    <span>Enjoy life!</span>
+		    <div class="pull-right">
+				<button class="btn btn-success btn-xs"> <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> </button>
+				<button class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> </button>
+			</div>
+		  </li>
+		</ul>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="js/todo-list.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<title>Ajax (jQuery)</title>
+</head>
+<body>
+<div class="container">
+	<h1>Ajax (jQuery)</h1>
+	<div class="well">
+		<p> <a href="index.html">Back to index</a> </p>
+		<p>Use the undocumented webservice</p>
+		<pre>http://www.omdbapi.com/?s=search+string</pre> to search for movies.
+		<p>Replace "search+string" by the string you want to query.</p>
+		<p>
+			The returned object has a property "Search" with an array of objects.
+			These objects have the following properties:</p>
+			<ul>
+				<li>imdbID</li>
+				<li>Title</li>
+				<li>Year</li>
+				<li>Type</li>
+				<li>Poster</li>
+			</ul>
+		<p> <em>Note: Use a separate JavaScript code file "imdb.js"</em> </p>
+	</div>
+	<div class="row">
+		<form id="searchForm" action="#" class="form-horizontal" method="post" novalidate>
+			<div class="form-group">
+				<label class="control-label col-md-1" for="search">Search:</label>
+				<input type="text" id="search" name="search" size="50" required>
+				<button type="submit" class="btn btn-primary">Search</button>
+			</div>
+		</form>
+	</div>
+	<div id="resultPanel" class="panel panel-success hidden">
+		<div class="panel-heading">
+    		<h3 class="panel-title">Search results for "<span>QUERY</span>"</h3>
+  		</div>
+		<div class="panel-body">
+			<div class="media">
+				<div class="media-left">
+					<a href="#">
+						<img alt="64x85" src="http://placehold.it/64x85" class="media-object" width="64" height="85">
+					</a>
+				</div>
+				<div class="media-body">
+					<h4 class="media-heading">Title </h4>
+					<p>Year and Type</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="js/imdb.js"></script>
+</body>
+</html>
