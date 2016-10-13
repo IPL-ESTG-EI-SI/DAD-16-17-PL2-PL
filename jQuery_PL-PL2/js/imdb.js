@@ -38,8 +38,8 @@
   }
 
   function callAPI(){
-    var url = 'http://localhost';
-    //url +=encodeURI(searchText);
+    var url = 'http://www.omdbapi.com/?s=';
+    url +=encodeURI(searchText);
     $.get(url,processAPIResult)
     .fail(function(result, status, request) {
       resultPanel.removeClass('hidden');
