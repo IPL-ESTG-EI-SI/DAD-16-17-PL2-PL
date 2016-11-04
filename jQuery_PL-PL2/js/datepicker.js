@@ -11,7 +11,7 @@
     }
 
     $('#date1').datepicker($.datepicker.regional[ 'en' ]);
-    $('#date2').datepicker($.extend($.datepicker.regional[ 'en' ],options) );
+    $('#date2').datepicker($.extend({},$.datepicker.regional[ 'en' ],options) );
     $('#date3').datepicker();
     $('#date4').datepicker(options);
 
