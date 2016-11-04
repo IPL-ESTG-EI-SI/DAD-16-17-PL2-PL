@@ -1,0 +1,30 @@
+<div class="container">
+	<h1>Ajax (jQuery)</h1>
+	<div class="well">
+		<p> <a href="index.html">Back to index</a> </p>
+		<p>Use the undocumented webservice</p>
+		<pre>http://www.omdbapi.com/?s=search+string</pre> to search for movies.
+		<p>Replace "search+string" by the string you want to query.</p>
+		<p>
+			The returned object has a property "Search" with an array of objects.
+			These objects have the following properties:</p>
+			<ul>
+				<li>imdbID</li>
+				<li>Title</li>
+				<li>Year</li>
+				<li>Type</li>
+				<li>Poster</li>
+			</ul>
+		<p> <em>Note: Use a separate JavaScript code file "imdb.js"</em> </p>
+	</div>
+	<div class="row">
+		<form id="searchForm" action="#" class="form-horizontal" method="post" novalidate>
+			<div class="form-group">
+				<label class="control-label col-md-1" for="search">Search:</label>
+				<input type="text" id="search" name="search" size="50" required [(ngModel)]="searchText">
+				<button type="submit" class="btn btn-primary" (click)="searchBtnClick()">Search</button>
+			</div>
+		</form>
+	</div>
+    <imdb-movies [movies2]="movies"></imdb-movies>
+</div>
