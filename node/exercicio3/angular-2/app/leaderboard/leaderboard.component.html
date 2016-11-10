@@ -1,0 +1,9 @@
+<div *ngIf="leaderboard">
+    <div *ngFor="let player of leaderboard" class="player">
+        <div class="avatar">
+            <img [src]="player.avatar">
+        </div>
+        <div class="name">{{player.name}}</div>
+        <div class="score">{{player.maxScore}}</div>
+    </div>
+</div>
