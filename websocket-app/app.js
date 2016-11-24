@@ -4,7 +4,7 @@ const path = require('path');
 const database = require('./app.database');
 const websocket = require('./app.websockets');
 
-const url = 'mongodb://localhost:27017/ficha5';
+const url = 'mongodb://localhost:27017/dad_mongo';
 
 const server = restify.createServer();
 

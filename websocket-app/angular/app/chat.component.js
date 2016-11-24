@@ -10,13 +10,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var websocket_service_1 = require('./notifications/websocket.service');
+var auth_service_1 = require('./auth.service');
 var ChatComponent = (function () {
-    function ChatComponent(websocketService) {
+    function ChatComponent(websocketService, authService) {
         this.websocketService = websocketService;
+        this.authService = authService;
     }
     ChatComponent.prototype.send = function () {
         // TODO: sends a chat messsage
-        this.websocketService.sendChatMessage(this.message);
+        var json = {
+            user: this.authService.user,
+            message: this.message
+        };
+        this.websocketService.sendChatMessage(json);
         this.message = '';
     };
     ChatComponent = __decorate([
@@ -25,7 +31,7 @@ var ChatComponent = (function () {
             selector: 'chat-control',
             templateUrl: 'chat.component.html'
         }), 
-        __metadata('design:paramtypes', [websocket_service_1.WebSocketService])
+        __metadata('design:paramtypes', [websocket_service_1.WebSocketService, auth_service_1.AuthService])
     ], ChatComponent);
     return ChatComponent;
 }());

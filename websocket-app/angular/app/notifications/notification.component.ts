@@ -22,8 +22,11 @@ export class NotificationComponent implements OnInit {
             this.playersChannel.push(message) );
 
         this.websocketService.getChatMessages()
-            .subscribe( message => 
-            this.chatChannel.push(message) );
+            .subscribe( message => {
+                let text = message.user.username+'---'+message.message
+                this.chatChannel.push(text)
+            }
+             );
     }
 
 }

@@ -40,6 +40,7 @@ passport.use(new BearerStrategy(function(token, done) {
         .catch(err => done(err));
 }));
 
+
 security.authorize = security.passport.authenticate('bearer', { session: false });
 
 function validPassword(player, password) {

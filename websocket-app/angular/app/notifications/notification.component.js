@@ -26,7 +26,8 @@ var NotificationComponent = (function () {
         });
         this.websocketService.getChatMessages()
             .subscribe(function (message) {
-            return _this.chatChannel.push(message);
+            var text = message.user.username + '---' + message.message;
+            _this.chatChannel.push(text);
         });
     };
     NotificationComponent = __decorate([

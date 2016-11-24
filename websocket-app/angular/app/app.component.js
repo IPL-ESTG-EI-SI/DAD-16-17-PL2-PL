@@ -9,16 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var auth_service_1 = require('./auth.service');
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(authService) {
+        this.authService = authService;
+        this.players = [];
     }
+    AppComponent.prototype.loginClick = function () {
+        var _this = this;
+        this.authService.login(this.username, this.password)
+            .subscribe(function (user) {
+            _this.user = user;
+            _this.authService.getPlayers()
+                .subscribe(function (players) { return _this.players = players; });
+        });
+    };
     AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'my-app',
             templateUrl: 'app.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [auth_service_1.AuthService])
     ], AppComponent);
     return AppComponent;
 }());
