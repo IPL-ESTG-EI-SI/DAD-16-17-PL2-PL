@@ -1,0 +1,30 @@
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+
+#board{
+  width: 200px;
+  height: 200px;
+}
+
+.board-cell{
+  width: 18px;
+  height: 18px;
+  float: left;
+  border: 1px solid red;
+
+  background-color: red;
+
+}
+
+.state0{
+  background-color: white;
+}
+
+.state1{
+  background-color: blue;
+}
+

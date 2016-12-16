@@ -1,0 +1,8 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "files.exclude": {
+        "angular/app/**/.js": true,
+        "angular/app/**/*.spec.ts": true,
+        "angular/app/**/.map": true
+    }
+}

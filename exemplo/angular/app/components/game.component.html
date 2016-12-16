@@ -1,0 +1,10 @@
+<h2>Game</h2>
+
+<div *ngFor="let board of boards; let i = index">
+  <board [board]="board" [index]="i"></board>
+</div>
+
+
+<div *ngFor="let msg of log; let i = index">
+  {{msg}}
+</div>
